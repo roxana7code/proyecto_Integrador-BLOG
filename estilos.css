@@ -1,0 +1,528 @@
+/* Importa la fuente Source Sans Pro desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400');
+
+/* ============================= */
+/* 🔹 RESET Y ESTILOS GENERALES 🔹 */
+/* ============================= */
+* {
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina los rellenos predeterminados */
+    box-sizing: border-box; /* Mantiene el tamaño total del elemento sin afectar padding y border */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-family: 'Source Sans Pro', sans-serif; /* Fuente predeterminada para toda la página */
+}
+
+/* ====================== */
+/* 🔹 ESTILOS DEL HEADER 🔹 */
+/* ====================== */
+header {
+    position: fixed; /* Mantiene el encabezado fijo en la parte superior */
+    top: 0; /* Lo coloca en la parte superior de la ventana */
+    left: 0; /* Lo alinea al lado izquierdo */
+    width: 100%; /* Hace que el header ocupe todo el ancho */
+    height: 80px; /* Define la altura del header */
+    background: #fff; /* Color de fondo blanco */
+    box-shadow: 0px 2px 5px lightgray; /* Sombra sutil para resaltar el header */
+    z-index: 2; /* Asegura que el header esté por encima de otros elementos */
+}
+
+/* POST SLIDER   */
+.post-slider {
+    position: relative;
+  }
+  
+  .post-slider .slider-title {
+    text-align: center;
+    margin: 30px auto;
+  }
+  
+  .post-slider .next {
+    position: absolute;
+    top: 4%;
+    right: 30px;
+    font-size: 2em;
+    color: #19e645;
+    cursor: pointer;
+  }
+  
+  .post-slider .prev {
+    position: absolute;
+    top: 4%;
+    left: 30px;
+    font-size: 2em;
+    color: #19e645;
+    cursor: pointer;
+  }
+  
+  .post-slider .post-wrapper {
+    width: 84%;
+    height: 350px;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+  }
+  
+  .post-slider .post-wrapper .post {
+    width: 300px;
+    height: 330px;
+    margin: 0px 10px;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem #a0a0a033;
+  }
+  
+  .post-slider .post-wrapper .post .post-info {
+    height: 130px;
+    padding: 0px 5px;
+  }
+  
+  .post-slider .post-wrapper .post .slider-image {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+/* Contenedor del contenido dentro del header */
+.header-content {
+    max-width: 1200px; /* Limita el ancho máximo del contenido */
+    margin: auto; /* Centra el contenido horizontalmente */
+    display: flex; /* Usa flexbox para organizar elementos */
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+}
+
+/* ======================= */
+/* 🔹 LOGO DEL HEADER 🔹 */
+/* ======================= */
+.logo {
+    height: 80px; /* Altura del área del logo */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo del texto dentro del logo */
+.logo h1 {
+    color: yellowgreen; /* Color del texto del logo */
+}
+
+/* =================== */
+/* 🔹 MENÚ DE NAVEGACIÓN 🔹 */
+/* =================== */
+.menu {
+    height: 80px; /* Mantiene la misma altura que el header */
+}
+
+/* Contenedor del menú de navegación */
+.menu nav {
+    height: 100%; /* Ocupa toda la altura del menú */
+}
+
+/* Lista de elementos del menú */
+.menu nav ul {
+    height: 100%;
+    display: flex; /* Usa flexbox para alinear los elementos en una fila */
+    list-style: none; /* Elimina los estilos predeterminados de lista */
+}
+
+/* Estilos para cada opción del menú */
+.menu nav ul li {
+    height: 100%;
+    margin: 0px 20px; /* Espaciado horizontal entre los elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Permite agregar efectos visuales como líneas */
+}
+
+/* Línea superior que indica el menú seleccionado */
+.menu-selected:before {
+    content: ""; /* Elemento vacío para la línea */
+    width: 100%;
+    height: 4px;
+    background: #BDB76B; /* Color de la línea */
+    position: absolute;
+    top: 0; /* Aparece en la parte superior del menú */
+    left: 0;
+}
+
+/* Estilos para los enlaces dentro del menú */
+.menu nav ul li a {
+    color: #777777; /* Color gris del texto del menú */
+    font-size: 18px; /* Tamaño de la fuente */
+    transition: color 300ms; /* Transición de color al pasar el cursor */
+}
+
+/* Cambia el color del enlace cuando el usuario pasa el mouse */
+.menu nav ul li a:hover {
+    color: #BDB76B; /* Color del texto cuando está en hover */
+}
+
+/* Estilo para el texto del menú seleccionado */
+.menu .text-menu-selected {
+    color: #BDB76B; /* Color del elemento activo en el menú */
+}
+
+.menu nav ul li a i{
+    display: none;/*flex*/
+}
+
+#icon-menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    font-size: 20px;
+    background: #fafafa;
+    border-radius: 100%;
+    color:#78787878;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+#icon-menu:hover{
+    opacity: 0.85;/*background: #f2f2f2;*/
+    
+}
+
+/* ====================== */
+/* 🔹 SECCIÓN DE PORTADA 🔹 */
+/* ====================== */
+.container-cover {
+    width: 100%; /* Asegura que cubra toda la anchura de la pantalla */
+    height: 500px; /* Altura fija de la portada */
+    position: relative; /* Permite superponer elementos como capas */
+    margin-top: 80px; /* Evita que se superponga con el header fijo */
+    background-image: url(imagenWeb/img3.jpg); /* Imagen de fondo */
+    background-position: center; /* Centra la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir toda el área */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+/* Capa de color sobre la imagen de la portada */
+.container-cover:before {
+    content: ""; /* Elemento vacío para crear la capa */
+    width: 100%;
+    height: 100%;
+    background: rgba(150, 255, 38, 0.8); /* Color verde con opacidad */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ================================ */
+/* 🔹 CONTENIDO CENTRAL DE LA PORTADA 🔹 */
+/* ================================ */
+.container-info-cover {
+    max-width: 800px; /* Limita el ancho del contenido */
+    height: 500px; /* Coincide con la altura de la portada */
+    margin: auto; /* Centra el contenido */
+    text-align: center; /* Alinea el texto al centro */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    position: relative; /* Asegura que esté sobre la capa de fondo */
+    z-index: 1; /* Lo coloca sobre la capa de color */
+}
+
+/* ====================== */
+/* 🔹 ESTILOS DEL TEXTO 🔹 */
+/* ====================== */
+.container-info-cover h1 {
+    font-size: 45px; /* Tamaño grande del título */
+    font-weight: 500; /* Peso de la fuente */
+    color: #333333; /* Color gris oscuro */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.container-info-cover p {
+    font-size: 20px; /* Tamaño del texto del párrafo */
+    font-weight: 300; /* Fuente ligera */
+    color: #333333; /* Color gris oscuro */
+}
+
+/*contenedor - contenido del articulo*/
+.container-conten{
+    width: 1200px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+article{
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    box-shadow: -10px 0 20px -30px black;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+article:before{
+    content: "";
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(150, 255, 38, 0.8);
+
+}
+
+article h1{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 40px;
+
+}
+
+article p{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #3c3c3c
+}
+
+article img{
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*aside de los areticulos de relacionados*/
+
+.container-aside aside{
+    width: 320px;
+    box-shadow: 0 0 20px -20px black;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: 40px;
+    margin-bottom: 40%;
+    padding-bottom: 20px;
+}
+
+.container-aside aside img{
+    width: 100%;
+}
+
+.container-aside aside h2,
+.container-aside aside p{
+    margin-top:  20px;
+    padding: 0px 20px;
+
+}
+
+.container-aside aside button{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    font-size: 16px;
+    background: rgba(150, 255, 38, 0.8);
+    border: none;
+    color: #3c3c3c;
+    cursor: pointer;
+    border-radius: 6px;
+    font-family: 'Merriweather', sans-serif; 
+
+
+}
+
+.container-aside aside button:hover{
+    opacity: 0.85;
+    font-family: 'Merriweather', sans-serif; 
+} 
+
+/*footer - pie de pagina*/
+
+.container-footer{
+    width: 100%;
+    padding: 40px 0;
+    background: #f7f7f7;
+    margin-top: 40px;
+}
+
+.container-footer footer{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-footer footer .logo-footer{
+    text-align: center;
+}
+
+.container-footer footer .logo-footer img{
+    width: 100px;
+}
+
+.container-footer footer .redes-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.container-footer footer .redes-footer .icon-redes-footer{
+    font-size: 20px;
+    margin: 20px;
+    background: #efefef;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #a2a2a2
+}
+
+.container-footer footer .redes-footer .fa-facebook:hover{
+    background: #41479a;
+    color: #fff;    
+}
+
+.container-footer footer .redes-footer .fa-instagram:hover{
+    background: linear-gradient(to top right, #fcde30, #e9712a, #d2313b, #ae4198, #7546a1, #5443A6);
+    color: #fff;
+}
+
+.container-footer footer .redes-footer .fa-heart:hover{
+    background: #ff0000;
+    color: #fff;
+}
+
+.container-footer footer hr{
+    margin-top: 20px;
+    border: none;
+    height: 2px;
+    background: #c0c0c07a;
+    
+}
+
+.container-footer h4{
+    text-align: center;
+    margin-top: 40px;
+    color: #8e8e8e;
+    font-weight: 500px;
+
+}
+
+/* Responsive Desig - adaptable a dispocitivos moviles */
+
+@media screen and (max-width: 1220px){
+
+    .header-content,
+    .container-content,
+    .container-footer footer{
+        max-width: 1000px;
+        padding: 20px;
+
+    }
+
+}
+
+@media screen and (max-width: 1020px){
+
+    .container-content{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    article{
+        box-shadow: 0 0 0 0;
+    }
+
+    .container-aside{
+        display: flex;
+        justify-content: center;
+          
+    }
+
+    .container-aside aside{
+        max-width: 300px;
+        margin: 10px;
+
+    }
+
+}
+
+@media screen and (max-width: 800px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .container-all{
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .move-container-all{
+        transform: translateX(300px);
+    }
+
+    .menu{
+        width: 0px;/*300*/
+        height: 100vh;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: #fff;
+        transform: translateX(-350px);
+        overflow: hidden;
+        box-shadow: 10px 0px 20px -25px black;
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .show-lateral{
+        width: 300px;
+        transform: translateX(0px);
+    }
+
+    
+
+    .menu nav ul {
+        flex-direction: column;
+
+    }
+
+    .menu nav ul li{
+        max-width: 200px;
+        height: 50px;
+        justify-content: flex-start;
+    }
+
+}
+
+    .menu-selected:before{
+        width: 0;
+    }
+
+    .menu nav ul li a{ 
+        margin-top: 40px;
+        color: #858585;
+    }
+
+    .menu nav ul li a i{
+        width: 20px;
+        display: inline-block;
+        margin-right: 10px;
+        color: yellowgreen;
+    }
+
+    .icon-menu{
+        display: flex;
+
+    }
+
+    .container-aside{
+        flex-wrap: wrap;
+    }
+
+   

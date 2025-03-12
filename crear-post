@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Post</title>
+    <link rel="stylesheet" href="estilos2.css">
+    <link rel="stylesheet" href="C:\Users\aflor\OneDrive\Documents\css\estilos2.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+
+            <div class="logo">
+                <h1 style="margin-right: 5px; display: inline;">Salud</h1>
+                <h2 style="display: inline;">y bienestar</h2>
+
+
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                <nav>
+                    <ul>
+                        <li><a href="#"> <i class="fas fa-home"></i>Inicio</a></li>
+                        <li><a href="#"> <i class="fab fa-youtube"></i>Tutoriales</a></li>
+                        <li class="menu-selected"><a href="#"class="text-menu-selected">
+                            <i class="fas fa-file-alt"></i>Blog</a></li>
+                        <li><a href="#"> <i class="fas fa-headset"></i> Contacto</a></li>
+                        <li><a href="crear-post.html"><i class="fas fa-pen"></i> Crear Post</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+
+       <div id="icon-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    <!-- Formulario para crear un post -->
+    <div class="container">
+        <h2>Nuevo Post</h2>
+        <form id="formularioPost">
+            <label for="contenidoPost">Contenido del post:</label><br>
+            <textarea id="contenidoPost" rows="6" placeholder="Escribe el contenido aquí..."></textarea><br>
+            <button type="button" id="btnGuardarPost">Guardar Post</button>
+        </form>
+    </div>
+
+    <script src="js/script2.js"></script>
+</body>
+</html>
